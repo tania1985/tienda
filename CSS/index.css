@@ -1,7 +1,7 @@
 /* Estilo general del body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #e0e0e0; /* Fondo gris suave */
+    background-color: #f6f6e9; /* Fondo amarillo pastel */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,12 +12,23 @@ body {
 
 /* Estilo del formulario */
 form {
-    background-color: #f1f8ff; /* Fondo azul suave */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* Fondo blanco del formulario */
+    padding: 25px;
+    border-radius: 16px; /* Bordes redondeados */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
     width: 100%;
-    max-width: 400px; /* Limita el tamaño del formulario a 400px en pantallas grandes */
+    max-width: 400px; /* Limita el tamaño del formulario */
+    border: 3px solid #aed581; /* Borde verde suave */
+    position: relative; /* Para mantener la posición del error */
+}
+
+/* Estilo del título del formulario */
+form h1 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #558b2f; /* Verde oscuro */
 }
 
 /* Estilo de las etiquetas */
@@ -25,7 +36,7 @@ label {
     display: block;
     margin-bottom: 8px;
     font-size: 14px;
-    color: #333;
+    color: #33691e; /* Verde oscuro intenso */
 }
 
 /* Estilo de los inputs */
@@ -34,29 +45,53 @@ input[type="password"] {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #ccc; /* Borde gris claro */
-    border-radius: 4px;
-    background-color: #fafafa; /* Fondo gris claro */
+    border: 2px solid #dcedc8; /* Borde verde pastel */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f9fbe7; /* Fondo amarillo pálido */
     box-sizing: border-box;
     font-size: 16px;
+    color: #33691e; /* Texto verde oscuro */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Cambios al enfocar un input */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #7cb342; /* Verde más intenso */
+    box-shadow: 0 0 8px rgba(124, 179, 66, 0.5); /* Resaltado verde */
+    outline: none;
 }
 
 /* Estilo del botón de envío */
 input[type="submit"] {
     width: 100%;
     padding: 12px;
-    background-color: #6dbf8b; /* Verde suave */
+    background-color: #7cb342; /* Verde intenso */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px; /* Bordes redondeados */
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease; /* Transición suave en el hover */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* Estilo del botón de envío cuando el ratón pasa por encima */
 input[type="submit"]:hover {
-    background-color: #5ca974; /* Verde más oscuro al hacer hover */
+    background-color: #558b2f; /* Verde más oscuro */
+    transform: scale(1.02); /* Ligeramente más grande */
+}
+
+/* Estilo del mensaje de error */
+form p {
+    color: #d32f2f; /* Rojo oscuro */
+    font-size: 14px;
+    background-color: #ffebee; /* Fondo rojo claro */
+    border: 2px solid #d32f2f; /* Borde rojo oscuro */
+    padding: 10px;
+    border-radius: 8px; /* Bordes redondeados */
+    margin-top: 15px; /* Espaciado adicional debajo del botón */
+    margin-bottom: 0; /* No más espacio debajo del mensaje */
+    text-align: center;
 }
 
 /* Media query para pantallas pequeñas */
@@ -66,7 +101,7 @@ input[type="submit"]:hover {
     }
 
     form {
-        padding: 15px; /* Reducir el padding del formulario en pantallas pequeñas */
+        padding: 20px; /* Reducir el padding del formulario en pantallas pequeñas */
     }
 
     input[type="submit"] {
