@@ -1,3 +1,22 @@
+<?php
+if (isset($_POST["username"])) {
+    include("conexiondb.php");
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    $sql = "SELECT * FROM usuarios WHERE username = :username";
+    $stm=$conexion->prepare($sql);
+    $stm->bindParam(":username", $username);
+    $stm->execute();
+    $row=$stm->fetch(PDO::FETCH_ASSOC);
+    if($row) {
+        var_dump($row);
+        exit();
+    } else {
+        var_dump($row);
+        exit();
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
