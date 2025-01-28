@@ -1,123 +1,276 @@
-/* General */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #F0F2F5; /* Fondo gris claro */
+/* Reset de márgenes y padding */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 0;
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    flex-direction: column;
 }
 
 /* Contenedor principal */
 .container {
-    background-color: #FFFFFF; /* Fondo blanco */
     width: 90%;
     max-width: 1200px;
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    overflow: hidden;
+    margin: 0 auto;
+    flex-grow: 1;  /* Esto asegura que el contenido ocupe el espacio disponible */
 }
 
-/* Header */
+/* Cabecera */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #007BFF; /* Azul principal */
+    background-color: #85c7e0; /* Azul claro */
     color: white;
-    font-size: 18px;
-    border-bottom: 2px solid #0056b3; /* Línea inferior azul oscuro */
+    padding: 15px 20px;
 }
 
 header i {
-    font-size: 24px;
-    margin-right: 10px;
+    font-size: 30px;
 }
 
-header p {
-    margin: 0;
-    flex-grow: 1;
-    text-align: center;
-}
-
-header .logout-btn {
-    text-decoration: none;
-    color: white;
-    background-color: #FF4D4D; /* Rojo para el botón de cerrar sesión */
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-header .logout-btn:hover {
-    background-color: #cc0000; /* Rojo más oscuro al pasar el cursor */
-}
-
-/* Main */
+/* Menú de navegación lateral */
 main {
     display: flex;
-    flex-grow: 1;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+    flex-grow: 1; /* Esto hace que el contenido principal ocupe el espacio disponible */
 }
 
-/* Aside */
-aside {
-    background-color: #F8F9FA; /* Fondo gris claro */
-    width: 250px;
-    padding: 20px;
-    border-right: 2px solid #E0E0E0;
-    box-sizing: border-box;
+/* Sidebar */
+main aside {
+    width: 30%;
+    margin-right: 20px;
 }
 
+main section {
+    width: 70%;
+}
+
+/* Estilo del menú en el lateral */
 aside ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding-left: 0;
 }
 
-aside li {
-    margin-bottom: 15px; /* Separación entre los elementos */
+aside ul li {
+    margin-top: 10px;
+    padding: 10px;
 }
 
-aside li a {
-    text-decoration: none;
+aside ul li a {
     color: #333;
-    font-size: 16px;
+    text-decoration: none;
     display: flex;
     align-items: center;
-    transition: color 0.3s ease;
 }
 
-aside li a i {
+aside ul li a i {
     margin-right: 10px;
-    color: #007BFF; /* Azul principal para los íconos */
-    font-size: 18px;
 }
 
-aside li a:hover {
-    color: #007BFF; /* Cambia el texto a azul en hover */
+aside ul li a:hover {
+    color: #0176a1; /* Azul más oscuro al pasar el mouse */
 }
 
-/* Section */
-section {
-    flex-grow: 1;
+/* Separadores entre secciones */
+aside ul li + li {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+/* Estilos para el listado de proveedores */
+section .listado {
+    background-color: white;
+    border-radius: 8px;
     padding: 20px;
-    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-/* Footer */
-footer {
-    background-color: #007BFF; /* Azul principal */
-    color: white;
-    text-align: center;
+h1 {
+    color: #85c7e0; /* Azul claro */
+    margin-bottom: 10px;
+}
+
+/* Separadores dentro de las secciones */
+section .listado h3 {
+    margin-top: 20px;
+    color: #85c7e0; /* Azul claro */
+    border-top: 2px solid #85c7e0;
+    padding-top: 10px;
+}
+
+/* Estilos de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
     padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #85c7e0; /* Azul claro */
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table a {
+    color: #0176a1; /* Azul más oscuro */
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 4px;
+}
+
+table a:hover {
+    background-color: #0176a1; /* Azul más oscuro */
+    color: white;
+}
+
+/* Estilos para el formulario */
+form {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     font-size: 14px;
-    border-top: 2px solid #0056b3; /* Línea superior azul oscuro */
+}
+
+form input[type="submit"] {
+    background-color: #85c7e0; /* Azul claro */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0176a1; /* Azul más oscuro */
+}
+
+/* Estilos para el botón "Cancelar" */
+form input[type="reset"] {
+    background-color: #ff6666; /* Rojo suave */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+form input[type="reset"]:hover {
+    background-color: #e55a5a; /* Rojo más oscuro */
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center;
+    background-color: #85c7e0; /* Azul claro */
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.contacto {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Diseño responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    main aside {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    main section {
+        width: 100%;
+    }
+
+    table th, table td {
+        font-size: 14px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form input[type="text"] {
+        font-size: 14px;
+    }
+
+    form input[type="submit"] {
+        font-size: 14px;
+    }
+}
+
+/* Diseño responsive para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    header i {
+        font-size: 24px;
+    }
+
+    aside ul li a {
+        font-size: 14px;
+    }
+
+    section .listado {
+        padding: 15px;
+    }
+
+    table th, table td {
+        padding: 8px;
+        font-size: 12px;
+    }
 }
