@@ -23,8 +23,9 @@ $result = $conexion->query($sql);
                     echo "<td>" . $fila['id'] . "</td>";
                     echo "<td>" . $fila['nombre'] . "</td>";
                     echo "<td>" . $fila['web'] . "</td>";
-                    echo "<td><a href='editar_proveedor.php?id=" . $fila['id'] . "'>Editar</a> | <a href='eliminar_proveedor.php?id=" . $fila['id'] . "'>Eliminar</a></td>";
-                    echo "</tr>";
+                    echo "<td><a href='ver_proveedor.php?id=" . $fila['id'] . "'>Ver</a> | 
+                    <a href='editar_proveedor.php?id=" . $fila['id'] . "'>Editar</a> | 
+                    <a href='eliminar_proveedor.php?id=" . $fila['id'] . "'>Eliminar</a></td>";
                 }
                 ?>
             </tbody>
@@ -44,6 +45,7 @@ $result = $conexion->query($sql);
         <div class="contacto">
             <div>
                 <h3>Nueva dirección</h3>
+                <div class="nueva-direccion">
                 <form action="nueva_direccion.php" method="post">
                     <input type="hidden" name="idproveedor" value="<?php echo $_GET["id"]; ?>">
                     <label for="calle">Calle</label>
@@ -57,6 +59,7 @@ $result = $conexion->query($sql);
                     <input type="submit" value="Guardar">
                     <input type="reset" value="Cancelar">
                 </form>
+                </div>
             </div>
             <div>
                 <h3>Nuevo teléfono</h3>
@@ -70,6 +73,8 @@ $result = $conexion->query($sql);
             </div>
 
         </div>
+        <a href="proveedores">Volver</a>
+
         <?php } ?>
     </div>
 </section>

@@ -45,7 +45,40 @@ main {
     margin-top: 20px;
     flex-grow: 1; /* Esto hace que el contenido principal ocupe el espacio disponible */
 }
+/* Estilo de botón Cancelar */
+form input[type="reset"] {
+    background-color: #6c757d; /* Gris para el botón de 'Cancelar' */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+/* Estilo para el botón Volver */
+a.volver {
+    display: inline-block;
+    background-color: #85c7e0; /* Azul claro */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
 
+/* Efecto hover para el botón Volver */
+a.volver:hover {
+    background-color: #0176a1; /* Azul más oscuro */
+}
+
+/* Efecto hover del botón Cancelar */
+form input[type="reset"]:hover {
+    background-color: #5a6268; /* Gris más oscuro para 'Cancelar' al pasar el mouse */
+}
 /* Sidebar */
 main aside {
     width: 30%;
@@ -102,12 +135,41 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* Separadores dentro de las secciones */
-section .listado h3 {
-    margin-top: 20px;
-    color: #85c7e0; /* Azul claro */
-    border-top: 2px solid #85c7e0;
-    padding-top: 10px;
+/* Estilos para los botones Ver, Editar, Eliminar */
+table a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* Estilo de botón Ver */
+table a:nth-child(1) {
+    background-color: #28a745; /* Verde para el botón de 'Ver' */
+}
+
+table a:nth-child(1):hover {
+    background-color: #218838; /* Verde oscuro para 'Ver' */
+}
+
+/* Estilo de botón Editar */
+table a:nth-child(2) {
+    background-color: #ffc107; /* Amarillo para el botón de 'Editar' */
+}
+
+table a:nth-child(2):hover {
+    background-color: #e0a800; /* Amarillo oscuro para 'Editar' */
+}
+
+/* Estilo de botón Eliminar */
+table a:nth-child(3) {
+    background-color: #dc3545; /* Rojo para el botón de 'Eliminar' */
+}
+
+table a:nth-child(3):hover {
+    background-color: #c82333; /* Rojo oscuro para 'Eliminar' */
 }
 
 /* Estilos de la tabla */
@@ -130,19 +192,6 @@ table th {
 
 table tr:nth-child(even) {
     background-color: #f2f2f2;
-}
-
-table a {
-    color: #0176a1; /* Azul más oscuro */
-    text-decoration: none;
-    padding: 5px 10px;
-    margin-right: 5px;
-    border-radius: 4px;
-}
-
-table a:hover {
-    background-color: #0176a1; /* Azul más oscuro */
-    color: white;
 }
 
 /* Estilos para el formulario */
@@ -184,23 +233,6 @@ form input[type="submit"]:hover {
     background-color: #0176a1; /* Azul más oscuro */
 }
 
-/* Estilos para el botón "Cancelar" */
-form input[type="reset"] {
-    background-color: #ff6666; /* Rojo suave */
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-left: 10px;
-}
-
-form input[type="reset"]:hover {
-    background-color: #e55a5a; /* Rojo más oscuro */
-}
-
 /* Estilos para el pie de página */
 footer {
     text-align: center;
@@ -212,6 +244,7 @@ footer {
     width: 100%;
 }
 
+/* Diseño de la sección de contacto */
 .contacto {
     display: flex;
     justify-content: space-between;
