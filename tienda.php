@@ -26,6 +26,7 @@ if (isset($_SESSION["username"])) {
         <header>
             <i class="fa-solid fa-store"></i>
             <p><?php echo $_SESSION["username"]; ?></p>
+            <a href="logout.php" class="logout-btn">Cerrar sesión</a>
         </header>
         <main>
             <aside>
@@ -42,7 +43,9 @@ if (isset($_SESSION["username"])) {
 
             </section>
         </main>
-        <footer></footer>
+        <footer>
+        <p>&copy; <?php echo date("Y"); ?> Tienda | Todos los derechos reservados</p>
+        </footer>
     </div>
 
 </body>

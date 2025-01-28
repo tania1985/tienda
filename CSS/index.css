@@ -1,115 +1,103 @@
-/* Estilo general del body */
+/* General */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f6f6e9; /* Fondo amarillo pastel */
+    background-color: #F0F2F5; /* Fondo gris claro */
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    padding: 0;
 }
 
-/* Estilo del formulario */
+/* Formulario */
 form {
-    background-color: #ffffff; /* Fondo blanco del formulario */
-    padding: 25px;
-    border-radius: 16px; /* Bordes redondeados */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+    background-color: #FFFFFF; /* Fondo blanco */
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     width: 100%;
-    max-width: 400px; /* Limita el tamaño del formulario */
-    border: 3px solid #aed581; /* Borde verde suave */
-    position: relative; /* Para mantener la posición del error */
-}
-
-/* Estilo del título del formulario */
-form h1 {
-    font-size: 22px;
-    font-weight: bold;
+    max-width: 400px; /* Máximo ancho del formulario */
+    box-sizing: border-box;
     text-align: center;
-    margin-bottom: 20px;
-    color: #558b2f; /* Verde oscuro */
 }
 
-/* Estilo de las etiquetas */
+/* Título */
+form h1 {
+    font-size: 24px;
+    color: #007BFF; /* Azul principal */
+    margin-bottom: 20px;
+}
+
+/* Etiquetas */
 label {
     display: block;
-    margin-bottom: 8px;
     font-size: 14px;
-    color: #33691e; /* Verde oscuro intenso */
+    color: #333;
+    margin-bottom: 8px;
+    text-align: left;
 }
 
-/* Estilo de los inputs */
+/* Inputs */
 input[type="text"],
 input[type="password"] {
     width: 100%;
     padding: 12px;
-    margin-bottom: 15px;
-    border: 2px solid #dcedc8; /* Borde verde pastel */
-    border-radius: 8px; /* Bordes redondeados */
-    background-color: #f9fbe7; /* Fondo amarillo pálido */
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px;
     box-sizing: border-box;
     font-size: 16px;
-    color: #33691e; /* Texto verde oscuro */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #F9F9F9; /* Fondo gris claro */
 }
 
-/* Cambios al enfocar un input */
 input[type="text"]:focus,
 input[type="password"]:focus {
-    border-color: #7cb342; /* Verde más intenso */
-    box-shadow: 0 0 8px rgba(124, 179, 66, 0.5); /* Resaltado verde */
+    border-color: #007BFF; /* Azul principal en el foco */
     outline: none;
 }
 
-/* Estilo del botón de envío */
+/* Botón de envío */
 input[type="submit"] {
     width: 100%;
     padding: 12px;
-    background-color: #7cb342; /* Verde intenso */
+    background-color: #007BFF; /* Azul principal */
     color: white;
     border: none;
-    border-radius: 8px; /* Bordes redondeados */
+    border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-/* Estilo del botón de envío cuando el ratón pasa por encima */
 input[type="submit"]:hover {
-    background-color: #558b2f; /* Verde más oscuro */
-    transform: scale(1.02); /* Ligeramente más grande */
+    background-color: #0056b3; /* Azul más oscuro al hacer hover */
 }
 
-/* Estilo del mensaje de error */
+/* Mensaje de error */
 form p {
-    color: #d32f2f; /* Rojo oscuro */
+    margin-top: 20px;
+    color: #FF4D4D; /* Rojo para el mensaje de error */
     font-size: 14px;
-    background-color: #ffebee; /* Fondo rojo claro */
-    border: 2px solid #d32f2f; /* Borde rojo oscuro */
-    padding: 10px;
-    border-radius: 8px; /* Bordes redondeados */
-    margin-top: 15px; /* Espaciado adicional debajo del botón */
-    margin-bottom: 0; /* No más espacio debajo del mensaje */
-    text-align: center;
 }
 
-/* Media query para pantallas pequeñas */
+/* Responsivo */
 @media (max-width: 480px) {
-    body {
-        padding: 10px; /* Añadir espacio alrededor en dispositivos pequeños */
-    }
-
     form {
-        padding: 20px; /* Reducir el padding del formulario en pantallas pequeñas */
+        padding: 20px;
     }
 
-    input[type="submit"] {
-        font-size: 14px; /* Ajustar el tamaño de la fuente del botón en pantallas pequeñas */
+    form h1 {
+        font-size: 20px;
     }
 
     input[type="text"],
     input[type="password"] {
-        font-size: 14px; /* Ajustar el tamaño de la fuente de los inputs en pantallas pequeñas */
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
     }
 }
