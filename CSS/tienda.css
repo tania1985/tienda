@@ -56,6 +56,65 @@ form input[type="reset"] {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+/* Botones generales */
+.btn-ver,
+.btn-editar,
+.btn-eliminar,
+.btn-anadir {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-right: 5px;
+}
+
+/* Estilos individuales por tipo de acción */
+.btn-ver {
+    background-color: #007bff; /* Azul */
+}
+
+.btn-ver:hover {
+    background-color: #0056b3;
+}
+
+.btn-editar {
+    background-color: #ffc107; /* Amarillo */
+    color: black;
+}
+
+.btn-editar:hover {
+    background-color: #e0a800;
+}
+
+.btn-eliminar {
+    background-color: #dc3545; /* Rojo */
+}
+
+.btn-eliminar:hover {
+    background-color: #c82333;
+}
+
+.btn-anadir {
+    background-color: #28a745; /* Verde */
+}
+
+.btn-anadir:hover {
+    background-color: #218838;
+}
+
+/* Efecto de hover en todos los botones */
+.btn-ver:hover,
+.btn-editar:hover,
+.btn-eliminar:hover,
+.btn-anadir:hover {
+    transform: scale(1.05);
+}
+
 /* Estilo para el botón Volver */
 a.volver {
     display: inline-block;

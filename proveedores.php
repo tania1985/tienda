@@ -18,14 +18,18 @@ $result = $conexion->query($sql);
             </thead>
             <tbody>
                 <?php
-                 while ($fila = $result->fetch(PDO::FETCH_ASSOC)) {
+                while ($fila = $result->fetch(PDO::FETCH_ASSOC)) {
                     echo "<tr>";
                     echo "<td>" . $fila['id'] . "</td>";
                     echo "<td>" . $fila['nombre'] . "</td>";
                     echo "<td>" . $fila['web'] . "</td>";
-                    echo "<td><a href='ver_proveedor.php?id=" . $fila['id'] . "'>Ver</a> | 
-                    <a href='editar_proveedor.php?id=" . $fila['id'] . "'>Editar</a> | 
-                    <a href='eliminar_proveedor.php?id=" . $fila['id'] . "'>Eliminar</a></td>";
+                    echo "<td>
+                            <a href='ver_proveedor.php?id=" . $fila['id'] . "' class='btn-ver'>Ver</a>
+                            <a href='editar_proveedor.php?id=" . $fila['id'] . "' class='btn-editar'>Editar</a>
+                            <a href='eliminar_proveedor.php?id=" . $fila['id'] . "' class='btn-eliminar'>Eliminar</a>
+                            <a href='nuevo_proveedor.php' class='btn-anadir'>Añadir</a>
+                          </td>";
+                    echo "</tr>";
                 }
                 ?>
             </tbody>
