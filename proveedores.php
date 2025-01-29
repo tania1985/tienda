@@ -1,7 +1,7 @@
 <?php
 include("partials/cabecera.php");
 // Consulta para obtener los proveedores
-$sql = "SELECT * FROM proveedores order by id desc";
+$sql = "SELECT * FROM proveedores order by id ASC";
 $result = $conexion->query($sql);
 ?>
 <section>
