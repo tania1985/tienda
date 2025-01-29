@@ -1,6 +1,6 @@
 <?php
 include("partials/cabecera.php");
-include("conexion.php");
+include("conexiondb.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST['nombre'];
